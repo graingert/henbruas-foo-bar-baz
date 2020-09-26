@@ -1,0 +1,33 @@
+[build-system]
+requires = ["flit_core >=2,<4"]
+build-backend = "flit_core.buildapi"
+
+[tool.flit.metadata]
+module = "foo"
+dist-name = "henbruas-foo-bar-baz"
+author = "Thomas Grainger"
+author-email = "foo@graingert.co.uk"
+home-page = "https://github.com/graingert/henbruas-foo-bar-baz"
+classifiers = ["License :: OSI Approved :: MIT License"]
+
+
+[tool.tox]
+legacy_tox_ini = """
+[tox]
+minversion=3.20.0
+requires=
+    virtualenv >= 20.0.31
+    tox-wheel >= 0.5.0
+
+[testenv]
+wheel = True
+wheel_pep517 = True
+wheel_build_env = build
+
+[testenv:build]
+
+
+[testenv:mypy]
+deps = mypy==0.782
+commands = mypy --strict .
+"""
