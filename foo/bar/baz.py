@@ -1,2 +1,4 @@
-def foo(v: object) -> None:
-    return None
+from typing import Literal
+
+
+x: Literal["foo.bar.baz.x"] = "foo.bar.baz.x"

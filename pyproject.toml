@@ -29,5 +29,5 @@ wheel_build_env = build
 
 [testenv:mypy]
 deps = mypy==0.782
-commands = mypy --strict .
+commands = mypy --strict foo tests
 """
